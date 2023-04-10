@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../shared/menu_drawer.dart';
+import '../shared/menu_bottom.dart';
 
 class IntroSreens extends StatelessWidget {
   const IntroSreens({Key? key }) : super(key: key);
@@ -9,18 +10,7 @@ class IntroSreens extends StatelessWidget {
     return Scaffold(
             appBar: AppBar(title: Text('Global Fitness')),
             drawer: MenuDrawer(),
-            bottomNavigationBar: BottomNavigationBar(
-              onTap: (),
-              items: [
-                BottomNavigationBarItem(
-                  icon: Icon(Icon.home),
-                  label: 'Home'
-                  ),
-                BottomNavigationBarItem(
-                  icon: Icon(Icon.monitor_weight),
-                  label: 'BMI'
-                  ),
-              ]),
+            bottomNavigationBar: MenuBottom(),
             body: Container(
               decoration:BoxDecoration (
                 image: DecorationImage(
@@ -53,3 +43,4 @@ class IntroSreens extends StatelessWidget {
 ;
 }
 }
+
